@@ -2,7 +2,7 @@
 
 [![Join the chat at https://gitter.im/adrianco/spigo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/adrianco/spigo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[![GoDoc](https://godoc.org/github.com/adrianco/spigo?status.svg)](https://godoc.org/github.com/adrianco/spigo) 
+[![GoDoc](https://godoc.org/github.com/adrianco/spigo?status.svg)](https://godoc.org/github.com/adrianco/spigo)
 
 [Wiki Instructions](https://github.com/adrianco/spigo/wiki)
 
@@ -17,12 +17,14 @@ Originally called Simulate Protocol Interactions in Go - spigo - the name spigo 
 
 ![aws reference architecture dependency graph](png/aws_ac_ra_web.png)
 
-For a local installation of the UI, with no network dependencies, you can start the service and browse localhost:8000 using:
+For a local installation of the UI, with no network dependencies, you can start the service using:
 ```
 $ cd ui
 $ npm install
 $ npm run dev
 ```
+
+Access the service by visiting [localhost:8000](http://localhost:8000) 
 
 ### Running the simulation to generate new visualizations and metrics
 
@@ -91,7 +93,7 @@ $ compose2arch -file myarch.yaml > json_arch/myarch.json
 [See this paper for some Occam code](misc/SkypeSim07.pdf) and results for the original version of this idea circa 2007.
 
 The public launch was during a short keynote presentation at the March 2015 O'Reilly Software Architecture Conference: [Monitoring Microservices - A Challenge](
-http://www.slideshare.net/adriancockcroft/software-architecture-monitoring-microservices-a-challenge) - 
+http://www.slideshare.net/adriancockcroft/software-architecture-monitoring-microservices-a-challenge) -
 [Video of the 10 minute talk](https://youtu.be/smEuX-Hq6RI)
 
 Most of the microservices presentations on [Adrian's slideshare account](http://slideshare.net/adriancockcroft) discuss the current state of work.
@@ -100,4 +102,4 @@ The basic framework is in place, but more interesting behaviors, automonous runn
 
 Next steps include connecting the output directly to the browser over a websocket so the dynamic behavior of the graph can be seen in real time. A lot of refactoring has cleaned up the code and structure in preparation for more interesting features.
 
-Jason Brown's [list of interesting Gossip papers](http://softwarecarnival.blogspot.com/2014/07/gossip-papers.html) might contain something interesting to try and implement... 
+Jason Brown's [list of interesting Gossip papers](http://softwarecarnival.blogspot.com/2014/07/gossip-papers.html) might contain something interesting to try and implement...
