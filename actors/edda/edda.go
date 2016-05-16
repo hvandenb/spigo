@@ -2,6 +2,11 @@
 package edda
 
 import (
+	"log"
+	"strings"
+	"sync"
+	"time"
+
 	"github.com/adrianco/spigo/tooling/archaius"
 	"github.com/adrianco/spigo/tooling/collect"
 	"github.com/adrianco/spigo/tooling/gotocol"
@@ -9,10 +14,6 @@ import (
 	"github.com/adrianco/spigo/tooling/graphml"
 	"github.com/adrianco/spigo/tooling/graphneo4j"
 	"github.com/adrianco/spigo/tooling/names"
-	"log"
-	"strings"
-	"sync"
-	"time"
 )
 
 // Logchan is a buffered channel for sending logging messages to, or nil if logging is off
@@ -41,7 +42,7 @@ func Start(name string) {
 		graphjson.Setup(archaius.Conf.GraphjsonFile)
 	}
 	if archaius.Conf.Neo4jURL != "" {
-		graphneo4j.Setup(archaius.Conf.Neo4jURL)
+		graphneo4j.Setup(archaius.Conf.Neo4jURL, archaius.Conf.Neo4jUser, archaius.Conf.Neo4jPassword)
 	}
 	for {
 		msg, ok = <-Logchan

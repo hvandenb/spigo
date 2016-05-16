@@ -20,7 +20,13 @@ type Configuration struct {
 
 	// Neo4jURL is pointed at a database instance to turn on GraphML logging
 	Neo4jURL string `json:"neo4jurl,omitempty"`
-	
+
+	// Neo4jPassword is the password the user used to connect to Neo4j
+	Neo4jPassword string `json:"neo4jpassword,omitempty"`
+
+	// Neo4jUser is the user used to connect to Neo4j
+	Neo4jUser string `json:"neo4juser,omitempty"`
+
 	// RunDuration is the time in seconds to let the microservices chat
 	RunDuration time.Duration `json:"runduration,omitempty"`
 

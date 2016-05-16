@@ -12,6 +12,8 @@ func TestConf(t *testing.T) {
 	Conf.GraphmlFile = "graphml"
 	Conf.GraphjsonFile = "graphjson"
 	Conf.Neo4jURL = "localhost:7474"
+	Conf.Neo4jUser = "neo4j"
+	Conf.Neo4jPassword = "password"
 	Conf.RunDuration = 10 * time.Second
 	Conf.Dunbar = 100
 	Conf.Population = 100
