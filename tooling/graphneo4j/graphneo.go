@@ -34,7 +34,7 @@ func Setup(neo4jurl string, neo4juser string, neo4jpassword string) {
 		log.Fatal(err)
 	}
 
-	up = url.UserPassword(neo4juser, neo4jpassword)
+	up := url.UserPassword(neo4juser, neo4jpassword)
 	u.User = up
 	// tmp, err := sql.Open("neo4j-cypher", "http://neo4j:"+os.Getenv("NEO4JPASSWORD")+"@"+neo4jurl)
 	tmp, err := sql.Open("neo4j-cypher", u.String())
